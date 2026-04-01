@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蕭育亦 | 科技網頁 HW3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            /* 關鍵步驟：將網路連結改為本地圖片路徑 */
+            background: #1a0033 url('images/tech-background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* 導覽列優化：更透明 */
+        .navbar-custom {
+            background-color: rgba(26, 0, 51, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .glass-card {
+            /* 微調：帶有紫色調的半透明背景 */
+            background: rgba(40, 0, 80, 0.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(200, 150, 100, 0.3); /* 帶有淡銅色的邊框 */
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-section {
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+
+        /* 方型頭像 + 亮銅色邊框設計 */
+        .profile-square {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px; /* 輕微圓角，更現代 */
+            /* 亮銅色金屬質感邊框 */
+            border: 5px solid;
+            border-image: linear-gradient(45deg, #b87333, #f5e0c0, #b87333) 1;
+            box-shadow: 0 0 20px rgba(184, 115, 51, 0.6);
+            margin-bottom: 25px;
+        }
+
+        /* 技能標籤：改用亮銅色系 */
+        .skill-badge {
+            background: linear-gradient(45deg, #b87333 0%, #dcc090 100%);
+            color: #1a0033;
+            border: none;
+            padding: 8px 18px;
+            font-weight: 700;
+            margin: 6px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .work-img-container {
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid rgba(200, 150, 100, 0.5);
+        }
+
+        .work-img {
+            transition: 0.6s ease;
+        }
+
+        .work-img:hover {
+            transform: scale(1.1);
+        }
+
+        /* 漸層文字效果 */
+        .text-gradient {
+            background: linear-gradient(45deg, #fff 30%, #dcc090 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            background-color: rgba(26, 0, 51, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-gradient" href="#">蕭育亦 | SPACE CAT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">經歷</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">技術</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#works">作品</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero-section text-center">
+            <img src="images/profile.jpg" class="profile-square shadow-lg" alt="蕭育亦的太空貓頭像">
+            <h1 class="fw-bold display-4 text-gradient">蕭育亦</h1>
+            <p class="fs-5 opacity-75">跨越維度的程式碼編織者 | SPACE CAT MISSION</p>
+        </header>
+
+        <div class="row justify-content-center" id="about">
+            <div class="col-lg-10">
+                <section class="glass-card">
+                    <h3 class="fw-bold mb-4 text-gradient">MISSION LOG // 經歷回顧</h3>
+                    <p class="fs-6 lh-lg opacity-90">
+                        起源於長庚大學的數據星雲，曾參與多項跨星系開源項目，專注於邊緣運算與量子數據的可視化呈現。在 2024 年，成功開發出一套能自動編譯低熵程式碼的系統。擅長在極限環境下進行 Web App 的架構設計，目標是將技術的光芒傳播到更遠的數位邊疆。
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="skills">
+            <div class="col-lg-10">
+                <section class="glass-card">
+                    <h3 class="fw-bold mb-4 text-gradient">CORE PROTOCOLS // 核心技術</h3>
+                    <div class="d-flex flex-wrap">
+                        <span class="badge skill-badge rounded-pill shadow-sm">SQL</span>
+                        <span class="badge skill-badge rounded-pill shadow-sm">C++</span>
+                        <span class="badge skill-badge rounded-pill shadow-sm">PYTHON</span>
+                        <span class="badge skill-badge rounded-pill shadow-sm">WEB APP (DJANGO)</span>
+                        <span class="badge skill-badge rounded-pill shadow-sm">BOOTSTRAP 5</span>
+                        <span class="badge skill-badge rounded-pill shadow-sm">RWD</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="works">
+            <div class="col-lg-10">
+                <section class="glass-card">
+                    <h3 class="fw-bold mb-4 text-gradient">LATEST MISSION // 最新作品</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <div class="work-img-container mb-4 mb-md-0">
+                                <img src="images/work1.jpg" class="img-fluid work-img" alt="太空專案作品">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <h4>星際數據可視化介面</h4>
+                            <p class="opacity-75 fs-6">
+                                這是我在 Web Programming 課程中的旗艦項目。結合了 Bootstrap 5 的響應式設計與多層次 CSS 特效，展現了如何將複雜的深空數據，轉化為直觀且具有科幻美感的介面。
+                            </p>
+                            <button class="btn btn-outline-light btn-sm rounded-pill px-4 mt-2">啟動傳輸</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p class="mb-1 text-gradient fw-bold">SPACE CAT // CGU MISSION CONTROL</p>
+                <p>© 2026 蕭育亦 · HW3 GitHub Pages Project</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
